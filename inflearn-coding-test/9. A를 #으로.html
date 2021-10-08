@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+
+        function solution(array) {
+            let answer = array;
+            let sum = answer.reduce((acc, value) => acc + value, 0);
+            for(let smuf1 = 0; smuf1 < array.length - 1; smuf1++) {
+                for(let smuf2 = smuf1 + 1; smuf2 < array.length; smuf2++){
+                    if((sum-(answer[smuf1]+answer[smuf2]))==100){
+                        answer.splice(smuf2, 1);
+                        answer.splice(smuf1, 1);
+                    }
+                }
+            }
+
+            return answer;
+        }
+
+
+        console.log(array.length);
+        console.log(solution(array));
+        console.log(array.length)
+    </script>
+</body>
+</html>
