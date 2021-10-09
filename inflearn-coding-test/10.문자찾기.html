@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(s, t){
+            let answer=0;
+            for(let x of s){
+                if(x === t) answer++;
+            }
+            return answer;
+        }
+
+        let str="applepie";
+        console.log(solution(str, 'p'));
+
+    </script>
+</body>
+</html>
