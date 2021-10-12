@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+<div>방법1</div>  
+
+    <!-- <script>
         function solution(s, t){
             let answer=0;
             for(let x of s){
@@ -18,6 +20,19 @@
         let str="applepie";
         console.log(solution(str, 'p'));
 
+    </script> -->
+
+<div>방법2</div>
+    <script>
+        function solution(s, t){
+            let answer=s.split(t).length;
+            return answer-1;
+            }
+        
+        let str="computerprogramming";
+        console.log(solution(str, 'r'));
+
     </script>
+
 </body>
 </html>
